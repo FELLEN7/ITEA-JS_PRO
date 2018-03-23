@@ -1,0 +1,44 @@
+
+
+
+
+.post
+{
+  margin: 0 auto;
+  max-width: 300px;
+  background-color: #E1E1E1;
+  border-radius: 15px;
+  padding: 10px;
+  font-family: calibri;
+  margin-top: 20px;
+}
+
+h1
+{
+  margin-top: 10px;
+}
+
+img
+{
+  width: 100%;
+  border-radius: 15px;
+}
+
+.likes
+{
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  background: blue;
+  font-size: 1.1em;
+}
+
+.likes:hover
+{
+  box-shadow: 0px 0px 5px black;
+  cursor: pointer;
+}
