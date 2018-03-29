@@ -1,0 +1,21 @@
+{
+  "name": "kursach",
+  "version": "1.0.0",
+  "description": "itea_kurbot",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016\u0016:"
+  },
+  "keywords": [
+    "\u001b[:"
+  ],
+  "author": "Vlad",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
