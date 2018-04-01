@@ -32,7 +32,7 @@ bot.on('message', msg => {
   switch(msg.text){
     case keys.weather: bot.sendMessage(msg.chat.id, `/weather City - Show weather in selected city`);
     break
-    case keys.reminder: bot.sendMessage(msg.chat.id, `00:00 Task - Add new reminder`);
+    case keys.reminder: ShowTasks(msg);
     break
     case keys.bitcoin: Bitcoin(msg);
   }
@@ -81,6 +81,16 @@ function AddReminder(msg){
   }
 }
 
+function ShowTasks(msg){
+  let content = fs.readFileSync("./reminder_data/data.json");
+  let parsedContent = JSON.parse(content);
+  let Tasks = [];
+  parsedContent.Tasks.forEach((e, i) => {
+    i == 0 ? Tasks.push(`${i+1}. ${e.Task} - ${e.Time}`) : Tasks.push(`\n${i+1}. ${e.Task} - ${e.Time}`);
+  });
+  bot.sendMessage(msg.chat.id, `${Tasks}
+"00:00 Task" - Add new reminder 📝`);
+}
 
 function Greeting(msg, sayHello = true) {
   const answer = sayHello
